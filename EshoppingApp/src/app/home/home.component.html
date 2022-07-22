@@ -1,0 +1,104 @@
+<div>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/1/3d0ac179-044c-4060-a28a-89bbf63a112f1654099355774-Premium-Watches_DK--1-.jpg"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/1/553384ff-be1f-4272-81d6-6f9e43fe5fe51654097949853-Dresses_Desk.jpg"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/31/ad85684f-9dda-47e2-bdfe-c6d2ea3bb7271654007028955-Handbags-Wallets_DK.jpg"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/SS22/AFpage/FST-pc-Eng.jpg"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <span class="navbar-brand me-auto mb-3 h1">DEAL OF THE DAY</span>
+    </div>
+</nav>
+
+
+<div class="card-group">
+    <div class="card">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/20/b25ddc4d-e443-4fbd-8bb7-b1f5612ce9271655727646463-T-Shirts--6-.jpg"
+            class="d-block w-100" alt="...">
+
+    </div>
+    <div class="card">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/20/fcf431b5-f9bb-4827-a939-5ac20a217f531655727695933-Premium-Watches--3-.jpg"
+            class="d-block w-100" alt="...">
+
+    </div>
+    <div class="card">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/20/9f32789f-127c-4329-b8c8-3dc058dbd69a1655727749398-Trendy-Dresses.jpg"
+            class="d-block w-100" alt="...">
+
+    </div>
+    <div class="card">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/f9621136-0f00-44d5-aa06-b727a6c8f7c51644407437944-M-H_and_Wrogn_Shirts.jpg"
+            class="d-block w-100" alt="...">
+
+    </div>
+    <div class="card">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/20/f6ec9c9f-f986-474e-a2a3-e00570fb7ddb1655727769081-Natural-Care.jpg"
+            class="d-block w-100" alt="...">
+
+    </div>
+</div>
+
+
+<div class="row mt-5">
+    <div class="col-md-4 mb-3" *ngFor="let product of products">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../../assets/{{product.productImage}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{product.productName}}</h5>
+                <p class="card-text">{{product.productDescription}}</p>
+                <p class="card-text">₹  {{product.productMrp}}</p>
+                <a routerLink="/login" class="btn btn-primary" style="margin-right: 20px;"
+                    (click)="addtocart(product)">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+

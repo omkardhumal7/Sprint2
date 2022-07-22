@@ -1,0 +1,33 @@
+<div class="row" style="margin-left: 20px;">
+    <div class="column" style="border: 2px solid black">
+            <table>
+                <tr>
+                    <td>ID</td>
+                    <td>
+                        <input [(ngModel)]= "cat.id" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Category</td>
+                    <td>
+                        <input [(ngModel)]= "cat.catName" type="text">
+                    </td>
+                </tr>
+                <input type="submit" class="btn btn-primary" style="margin: 5px;" (click)="AddCategory()" />
+                <input type="button" class="btn btn-success" style="margin: 5px;" (click)="Show()" value="Show" />
+        </table>
+    </div>
+    <div class="column" style="margin-left: 20px;">
+
+        <table border="2">
+            <tr>
+                <td>ID</td>
+                <td>Category</td>
+            </tr>
+            <tr *ngFor="let item of cats">
+                <td style="padding: 10px;">{{item.id}}</td>
+                <td style="padding:10px;">{{item.catName}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

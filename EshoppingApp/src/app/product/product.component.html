@@ -1,0 +1,67 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <span class="navbar-brand me-auto mb-3 h1">BEST OF E-Shopping EXCLUSIVE BRANDS</span>
+    </div>
+</nav>
+
+<div class="card-group">
+    <div class="card">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2022/3/10/b25f89eb-fbeb-4013-829e-32ee5b5daaa01646895183668-Roadster-HRX_Unisex.jpg"
+            class="d-block w-100" alt="...">
+
+    </div>
+    <div class="card">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/bfa5c871-a5a5-4d81-b46e-18aedccfdc9b1644407437913-Kurta_sets-_Anouk-_AAY_-_more.jpg"
+            class="d-block w-100" alt="...">
+
+    </div>
+    <div class="card">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/eb70855e-98c4-412d-bf20-50804546d57e1644407437883-Dresses_-_Dressberry-_Chemistry_-_more.jpg"
+            class="d-block w-100" alt="...">
+
+    </div>
+    <div class="card">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/931b0b8f-c14d-4ec7-b923-cf512de991731644407437891-HOP_and_Anouk_Kurtas_-_sets.jpg"
+            class="d-block w-100" alt="...">
+
+    </div>
+    <div class="card">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/3f41465b-7109-4bb2-bf79-ab89ff2128be1644407437899-HRX_and_Harvard_Trackpants.jpg"
+            class="d-block w-100" alt="...">
+
+    </div>
+    <div class="card">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/3923c0c1-2260-4f0e-9598-15b6f9d7731c1644407437960-Roadster_and_H-N_Shirts.jpg"
+            class="d-block w-100" alt="...">
+
+    </div>
+    <div class="card">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/76acf345-fc62-4b49-8b2c-9c0fc9c925311644407437977-Tops_-_Dressberry-_AAY_-_more.jpg"
+            class="d-block w-100" alt="...">
+
+    </div>
+</div>
+
+
+
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <span class="navbar-brand me-auto mb-3 h1">MEN'S COLLECTION</span>
+    </div>
+</nav>
+
+<div class="row mt-5">
+    <div class="col-md-4 mb-3" *ngFor="let product of products | filter:searchKey:'productName' ">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../../assets/{{product.productImage}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{product.productName}}</h5>
+                <p class="card-text">{{product.productDescription}}</p>
+                <p class="card-text">₹ {{product.productMrp}}</p>
+                <a routerLink="/cart" class="btn btn-primary" style="margin-right: 20px;"
+                    (click)="addtocart(product)">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,86 @@
+<div class="position-relative m-4">
+    <div class="progress" style="height: 1px;">
+        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
+            aria-valuemax="100"></div>
+    </div>
+    <button routerLink="/cart" type="button"
+        class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill"
+        style="width: 2rem; height:2rem;">1</button>
+    <button routerLink="/finalorder" type="button"
+        class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill"
+        style="width: 2rem; height:2rem;">2</button>
+    <button routerLink="/ordercomplete" type="button"
+        class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill"
+        style="width: 2rem; height:2rem;">3</button>
+</div>
+<ng-container *ngIf="products.length !=0">
+    <div class="container">
+        <div class="card-table" style="position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: none;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid black;
+        border-radius: .25rem;">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <!-- <th>id</th>-->
+                            <th>ID</th>
+                            <th>Product Image</th>
+                            <th>product Mrp</th>
+                            <th>Product Name</th>
+
+                            <!--<th>Final</th>
+                            <th>Action</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let product of products; let i = index">
+                            <td>{{i+1}}</td>
+                            <!--<td>{{item.title}}</td>-->
+                            <td><img style="width: 120px;" src="../../assets/{{product.productImage}}" alt=""></td>
+                            <!--<td >{{product.productDescription}}</td>-->
+                            <th>{{product.productMrp}}</th>
+                            <td>{{product.productName}}</td>
+                            <!--<td style="width: 12%;">{{product.grandTotal}}</td>-->
+                            <td>
+                                <button (click)="removeItem(product)" class="btn btn-danger">Remove<i
+                                        class="fas fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
+                            <td><button routerLink="/product" class="btn btn-primary">Add items</button></td>
+                            <td><button class="btn btn-success" routerLink="/finalorder">Checkout</button></td>
+
+                            <td><strong>Grand Total : {{grandTotal}} Rs.</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="products.length ==0">
+    <div class="container">
+        <nav class="navbar bg-light">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-2 h1">
+                    <h1>My Cart</h1>
+                </span>
+            </div>
+        </nav>
+        <div class="img-fluid">
+            <img src="http://hsnbazar.com/images/empty-cart.png" class="rounded mx-auto d-block mb-4" alt="">
+
+            <button routerLink="/product" class="rounded mx-auto d-block mb-3">Shop Now</button>
+        </div>
+    </div>
+</ng-container>

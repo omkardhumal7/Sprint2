@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e02afaed-d581-4fc1-b693-3e1c05c7facf": {
+      "ProjectGuid": "e02afaed-d581-4fc1-b693-3e1c05c7facf",
+      "DisplayName": "EshoppingAPI",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
