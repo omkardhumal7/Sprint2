@@ -43,7 +43,7 @@
             <a class="btn btn-outline-success mx-1" aria-current="page" routerLink="/product">Product</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-outline-success mx-1" routerLink="/myorder">My Order</a>
+            <a class="btn btn-outline-success mx-1" *ngIf="LoggedIn(true)" routerLink="/myorder">My Order</a>
           </li>
           <li class="nav-item">
             <a class="btn btn-outline-success mx-1" *ngIf="LoggedIn(false)" routerLink="/login">Login</a>
@@ -52,7 +52,7 @@
             <a class="btn btn-outline-success mx-1" *ngIf="LoggedIn(false)" routerLink="/register">Register</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-outline-success mx-1"  *ngIf="LoggedIn(true)" routerLink="/account">My Account</a>
+            <a class="btn btn-outline-success mx-1"  *ngIf="LoggedIn(true)" routerLink="/cart">My Cart</a>
           </li>
           <li class="nav-item">
             <a class="btn btn-outline-success mx-1"  *ngIf="LoggedIn(true)" (click)="LogOut()">Logout</a>

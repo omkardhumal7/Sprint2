@@ -56,18 +56,21 @@
     </div>
     <div class="column" style="margin-left: 20px; margin-top: 10px">
 
-        <table border="2">
-            <tr>
-                <td> ID</td>
-                <td> Name</td>
-                <td> Description</td>
-                <td> Category</td>
-                <td> Image</td>
-                <td> Mrp</td>
-                <td> Discount</td>
-                <td> productSellingPrice</td>
-            </tr>
-            <tr *ngFor="let item of adminprods">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Category</th>
+                <th scope="col">Image</th>
+                <th scope="col">MRP</th>
+                <th scope="col">Discount</th>
+                <th scope="col">ProductSellingPrice</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of adminprods">
                 <td>{{item.id}}</td>
                 <td>{{item.productName}}</td>
                 <td>{{item.productDescription}}</td>
@@ -76,8 +79,8 @@
                 <td>{{item.productMrp}}</td>
                 <td>{{item.productDiscount}}</td>
                 <td>{{item.productSellingPrice}}</td>
-
-            </tr>
+              </tr>
+            </tbody>
         </table>
     </div>
 </div>

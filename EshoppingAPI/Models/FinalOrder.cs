@@ -15,9 +15,9 @@ namespace EshoppingAPI.Models
         public string City { get; set; }
         public int? Zip { get; set; }
         public string Email { get; set; }
-        public string OrderName { get; set; }
-        public decimal? OrderQuantity { get; set; }
-        public decimal? OrderPrice { get; set; }
+        public string ProductName { get; set; }
+        public decimal? ProductQuantity { get; set; }
+        public decimal? ProductPrice { get; set; }
         public string UserName { get; set; }
     }
 }

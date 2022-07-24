@@ -11,4 +11,5 @@ export class finalorder
     ProductName: string='';
     ProductQuantity: number=0;
     ProductPrice: number=0;
+    UserName: string='';
   }

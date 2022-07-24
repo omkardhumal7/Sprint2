@@ -1,16 +1,33 @@
-<table border="2">
+<td><input type="button" value="View Details" (click)="ViewDetails" /></td>
+<table class="table table-striped">
     <thead>
-     <tr>
-         <th border="1">UserName</th>
-         <th>Password</th>
-     </tr>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Address</th>
+        <th scope="col">State</th>
+        <th scope="col">City</th>
+        <th scope="col">Zip</th>
+        <th scope="col">Email</th>
+        <th scope="col">ProductName</th>
+        <th scope="col">ProductQuantity</th>
+        <th scope="col">ProductPrice</th>
+      </tr>
     </thead>
- 
- <tbody>
-     <tr *ngFor="let user of users">
-         <td>{{user.userName}}</td>
-         <td>{{user.password}}</td>
-         
-     </tr>
- </tbody>
- </table>
+    <tbody>
+      <tr *ngFor="let finalorder of users">
+        <td>{{finalorder.id}}</td>
+        <td>{{finalorder.firstName}}</td>
+        <td>{{finalorder.lastName}}</td>
+        <td>{{finalorder.address}}</td>
+        <td>{{finalorder.state}}</td>
+        <td>{{finalorder.city}}</td>
+        <td>{{finalorder.zip}}</td>
+        <td>{{finalorder.email}}</td>
+        <td>{{finalorder.ProductName}}</td>
+        <td>{{finalorder.ProductQuantity}}</td>
+        <td>{{finalorder.ProductPrice}}</td>
+      </tr>
+    </tbody>
+</table>

@@ -28,7 +28,7 @@ namespace EshoppingAPI.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-CUO3FKB;Initial Catalog=EshoppingDB;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-BN215B2;Initial Catalog=EshoppingDB;Integrated Security=True");
             }
         }
 
@@ -55,15 +55,13 @@ namespace EshoppingAPI.Models
 
                 entity.Property(e => e.LastName).HasMaxLength(50);
 
-                entity.Property(e => e.OrderName).HasMaxLength(50);
+                entity.Property(e => e.ProductName).HasMaxLength(50);
 
-                entity.Property(e => e.OrderPrice).HasColumnType("decimal(18, 2)");
+                entity.Property(e => e.ProductPrice).HasColumnType("decimal(18, 2)");
 
-                entity.Property(e => e.OrderQuantity).HasColumnType("decimal(18, 2)");
+                entity.Property(e => e.ProductQuantity).HasColumnType("decimal(18, 2)");
 
                 entity.Property(e => e.State).HasMaxLength(50);
-
-                entity.Property(e => e.UserName).HasMaxLength(200);
             });
 
             modelBuilder.Entity<Login>(entity =>
@@ -94,9 +92,13 @@ namespace EshoppingAPI.Models
 
                 entity.Property(e => e.ProductDiscount).HasColumnType("decimal(18, 2)");
 
+                entity.Property(e => e.ProductImage).HasMaxLength(50);
+
                 entity.Property(e => e.ProductMrp)
                     .HasColumnType("decimal(18, 2)")
                     .HasColumnName("ProductMRP");
+
+                entity.Property(e => e.ProductName).HasMaxLength(50);
 
                 entity.Property(e => e.ProductSellingPrice).HasColumnType("decimal(18, 2)");
             });

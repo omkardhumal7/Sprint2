@@ -7,7 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FinalOrderComponent } from './finalorder/finalorder.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-// import { MyorderComponent } from './myorder/myorder.component';
+import { MyorderComponent } from './myorder/myorder.component';
 import { OrdercompleteComponent } from './ordercomplete/ordercomplete.component';
 import { ProductComponent } from './product/product.component';
 import { RegisterComponent } from './register/register.component';
@@ -73,6 +73,10 @@ const routes: Routes = [
     path: 'update',
     component: UpdateComponent
   },
+  {
+    path: 'myorder',
+    component: MyorderComponent
+  }
 
   
  
